@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document2</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+    <div>
+        <h1> Datos compuestos o complejos:</h1>
+        <h3>FUNCTIONS</h3>
+
+        <p> Def: Funcion es un bloque de lineas de codigo que se van a ejecutar al unisono </p>
+
+        <P>1. Una funcion puede aceptar parametros</P>
+        <p>2. Las funciones en JS son objetos, un tipo especial de objetos</p>
+
+        <p>Funciones asignadas como valor, se pueden retornar como valores de otra funcion</p>
+
+        <script>
+
+            console.log("Segundo paso *******")
+
+            //FUNCTION DECLARADA***********************************************
+            function estoEsUnaFuncion(){
+                console.log("Uno");
+                console.log("Dos");
+                console.log("Tres");
+            }
+
+            function unaFuncionQueDevuelveValor(){
+                console.log("Cuatro");
+                console.log("Cinco");
+                return "la funcion ha retornado una cadena de texto" // funciona hasta el primer return
+                console.log("ocho")
+                return "esto se ignoro"
+                
+            }
+
+            //INVOCACION DE UNA FUNCION******************************************
+            estoEsUnaFuncion();
+            estoEsUnaFuncion();
+
+            console.log("funciones que devuelven valores ***************************")
+
+            let valorDeFuncion = unaFuncionQueDevuelveValor(); // el retorno se guarda en una variable
+            console.log(valorDeFuncion);
+
+            //FUNCION QUE RECIBE VALORES **************************************
+            console.log("funciones que reciben valores ***************************")
+
+            //funcion con parametros..
+            // let nombre = "lola";
+
+
+            function greeting(nombre,edad){
+                console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años`)
+            }
+
+            greeting("Pedro",50);
+
+            greeting();
+
+            
+            funcionDeclarada(); /*doesn't matter the order JS prioritise function declarations*/
+
+            function funcionDeclarada(){
+                console.log("Esto es una funcion declarada, puede invocarse en cualquier parte de nuestro codigo, incluso antes de que la funcion sea declarada");
+            }
+
+            const funcionExpresada = function(){
+                console.log("Para la funcion expresada dentro de una variable, no es posible llamar la funcion antes....")
+            }
+
+            funcionExpresada();
+
+
+
+
+
+
+            
+
+
+
+
+
+
+
+
+        
+
+
+        </script>
+
+
+    </div>
+    
+</body>
+</html>

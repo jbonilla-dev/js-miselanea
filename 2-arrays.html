@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+
+    <div>
+        <h1> Arreglos</h1>
+        <ol>
+            <li>
+                There are fuctions on JS to create arrays with default values: 
+                (Array(10).fill(true);)
+            </li>
+            <li>
+                Some of them allow to add or erase data on the array: 
+                colores.push("tres"); <br>
+    
+                colores.pop();
+  
+            </li>
+            <li>
+                you can also use loops to read every value on the array: <br>
+                
+                 <code>
+                    colores.forEach(function(el,index){
+                        console.log(`< li id="${index}" > ${el} </ li >`);
+                    })    
+                 </code> 
+            </li>
+        </ol>
+    </div>
+
+    <script>
+        console.log("Here you have the arrays***********");
+
+        const a= [];
+        const b = [1,true, "Hola", ["A","B","C"]];
+        console.log(a);
+        console.log(b);
+        console.log(b.length);
+
+        //Imprimir una parte especifica del array
+        console.log("This is the item on the position 2 on the array: ",b[2]);
+        console.log("This is the item on the position 2 on the array: ",b[3]);
+
+        // imprimir un item de un array dentro de otro array
+        console.log("This is the item on the position 2 on the array within another array: ",b[3][1]);
+
+
+        //metodos creacion de arrays
+
+        // funcion de javascript
+        const c = Array.of("X","Y","Z",9,8,7);
+        console.log(c);
+
+        // creando default 100 posiciones
+        const d = Array(10).fill(true);
+        console.log(d);
+
+        // añadir y eliminar elementos en la cola del array 
+        const colores = ["Rojo","Verde","Azul"];
+        console.log(colores);
+
+        //add
+        colores.push("tres");
+        console.log(colores);
+
+        //erase
+        colores.pop();
+        console.log(colores);
+
+        //excecute a function for each element on the array
+        colores.forEach(function(el,index){
+            console.log(`<li id="${index}">${el}</li>`);
+        }) //itera en cada elemento cambiando el valor "el"
+        // ademas se le puede agregar un id o index para el elemento iterado
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

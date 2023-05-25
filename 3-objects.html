@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+    <div>
+        <h1>Objects</h1>
+        <ol>
+            <li>
+                Objeto combinacion (clave-valor) like a dictionary on Py.
+            </li>
+            <li>
+                The object can be nested by other object or arrays, even fuctions
+            </li>
+            <li>
+                consolelogin the object followed by a dot  jon. can list the attributes of the object.
+            </li>
+            <li>
+                within an object:
+                <ul>
+                    <li>
+                    variables = attributes or properties
+                    </li>
+                    <li>
+                        fuctions = methods
+                    </li>
+                </ul>
+               
+            </li>
+            <li>
+                You can use the same keys and values saven on the object to use variables on fuctions
+            </li>
+        </ol>
+    </div>
+
+    <script>
+
+        // curly braces {} create an object
+        const b = {};
+        console.log(b);
+
+        const jon = {
+            nombre: "jon",
+            apellido: "mircha",
+            edad:35,
+            pasatiempos:["run","workout","valer monda"],
+            soltero:false,
+            //adding another object within the object
+            contacto:{
+                email:"jonmircha@gmail.com",
+                twitter:"@jonmircha",
+                movil:"5251321654"
+            },
+            saludar:function(){
+                console.log(`Hola :)`)
+            },
+            decirMiNombre: function(){
+                console.log(`Hola me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} años. Me puedes seguir como ${this.contacto.twitter} en twitter.`)
+            }
+        }
+
+        //this para hacer referencia al mismo objeto
+
+        console.log(jon);
+
+        // diving into the object  using key / value combination
+        console.log(jon["nombre"]);
+        console.log(jon["apellido"]);
+
+        console.log(jon.nombre);
+        console.log("edad:",jon.edad);
+
+        // acceder a anigados
+
+        console.log("pasatiempos (array):",jon.pasatiempos);
+        console.log(jon.pasatiempos[2]);
+
+        console.log("contacto (objeto):", jon.contacto.twitter);
+
+        // llamar una funcion o metodo
+        jon.saludar();
+
+        // llamar un metodo usando valores variables
+        jon.decirMiNombre();
+
+
+        //listar todas las keys on an object
+        console.log(Object.keys(jon));
+
+        
+        //listar todas los values on an object
+        console.log(Object.values(jon));
+
+        //buscar propiedad
+        console.log("Making a query: ",jon.hasOwnProperty("nombre"));
+        console.log("Making a query: ",jon.hasOwnProperty("nombr"));
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

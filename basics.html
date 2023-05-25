@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 1 on JS</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+
+    <h1>Hello Javascript!</h1>
+
+    <h1>Datos primitivos</h1>
+
+    <P> 1- Never use "var" (it doesn't differenciate within global and block declarations)</P>
+    <P> 2- "const" can't be declared twice with the same name on the same proyect</P>
+    <P> 3- the ` simbol  can be useful to print result easily</P>
+    <ul>
+        <li>
+             <strong>Undefined:</strong>  variable sin valor (asignado por JS cuando una variable no tiene valor)
+        </li>
+        <li>
+            <strong>Null:</strong>  variable esta vacia (asignado intensionalmente)
+        </li>
+        <li>
+            <strong>NaN:</strong> Not a number, la consola arroja esto cuando en la operacion hay datos que no son del tipo numbers.
+        </li>
+    </ul>
+    
+    <P> 3- the ` simbol  can be useful to print result easily</P>
+
+
+
+
+    <script>
+        var saludo = "Hola Mundo!";
+        console.log( saludo);
+        // var not used anymore NEVER USE IT!!, since it declared the variable as a global variable
+
+        let hi ="Hello World!"; //Use this since it's refered to blocks
+        console.log(hi);
+        console.log("This one is declared with let:",hi);
+
+
+        // --------------------- CONST
+        const PI = 3.1416;
+        console.log(PI);
+        console.log(PI+1);
+
+        // const PI = 3;
+        // console.log(PI);  SYSTEM DON{T LET DECLARE A CONST TWICE}
+
+        // ---------------------- JAVASCRIPT FUNCTIONS
+        let nombre = "Juan";
+        let apellido = "Beta";
+        let apellidoLong = "Beta tech"
+
+        nombre.toLocaleUpperCase();
+        console.log(nombre); // still the same
+        console.log(nombre.toLocaleUpperCase());
+
+        console.log(apellido.includes("n"));
+        console.log(apellido.split());
+        console.log(apellidoLong.split(" "));
+
+        
+        // -------------------------------- SPECIAL CHARACTERS
+
+        let ul ="<ul><li>Winter</li><li>Spring</li></ul>";
+        console.log(ul);
+
+        let ul2 =`
+        <ul>
+            <li>Winter</li>
+            <li>Spring</li>
+        </ul>
+        `;
+        console.log(ul2);
+
+        //CONCATENACION for STRINGS
+        let saludes = "hola me llamo "+ nombre +" "+ apellido +".";
+        console.log(saludes);
+
+        // interpolacion de variables FOR CHANGING VARIABLES
+        let reSaludes =`Hola mi nombre es ${nombre} ${apellido}`;
+        console.log(reSaludes);
+
+        // -------------------------- NUMBERS
+
+        let a = 3;
+
+        // with constructor
+        let b = new Number (56);
+        let c = 7.19;
+        let d = "cinco.seis"
+        let e = "5.6"
+
+        console.log("--------- Numbers")
+        console.log(a,b);
+
+        console.log("--------- type of the variable")
+        console.log("c is equal to: ", typeof c, " and d is equal to: ",typeof d);
+        console.log ("number plus string result: ", c+d);
+
+
+        // -------- rendondeo de numeros
+        console.log(c.toFixed(1)); // How many decimals the number is gonna show
+        console.log(parseInt(c)); // prints the INTEGER part of the info.
+        console.log(parseFloat(c)); // prints the float part of the number
+
+        //fuctions for numbers
+        console.log(c + parseInt(e)); // solo suma parte entera
+        console.log(c + parseFloat(e)); // convierte el STRING a float
+
+
+
+        // -------------------------- BOOLEANS
+        let verdadero = true;
+
+        console.log(verdadero);
+
+        console.log("Cero: ", Boolean(0));
+        console.log("Siete: ",Boolean(-7));
+        console.log("vacio: ",Boolean(""));
+        console.log("Espacio string: ",Boolean(" "));
+
+        //Truthy or falsy  valores que tienen a verdadero o a falso
+
+
+ 
+        // -------------------------- NULL, UNDEFINED  NaN
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
