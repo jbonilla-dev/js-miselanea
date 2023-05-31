@@ -5,12 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conditionals</title>
+    <style>
+        #hello{
+            border: solid 1px white;
+        }
+
+    </style>
 </head>
 <body style="background-color: black; color: aliceblue;">
     <div>
         <h1>Control structures</h1>
         <h2>Secuencial - (one trough the other)</h2>
-        <h2>Conditional (depending on the result, actions will be executed)</h2>
+        <h2 id="hello">Conditional (depending on the result, actions will be executed)
+            <ul>
+                <li>if / else if  / else (main characters) </li>
+                <li> the and && / or ||  conditionals help the statements</li>
+                <li>Operador ternario (simplyfy the if sentence in a line) "common in React Vue Angular to render"</li>
+            </ul>
+
+
+        </h2>
         <h2>Loops - or repetitive structures </h2>
 
         <script>
@@ -24,6 +38,79 @@
             }else{
                 console.log("you're underage");
             }
+
+
+            if (edad >= 17){  //issue with the logic
+                console.log("you're an adult ");
+            }else{
+                console.log("you're underage");
+            }
+
+            /* if - else if - else */
+
+            let hora = 22;
+
+            if(hora >= 0 && hora <= 5){
+                console.log("Dejame dormir ome");
+            } else if (hora >= 6 && hora <= 11 ){
+                console.log("Buenos dias veci")
+            } else if (hora >= 12 && hora <= 18) {
+                console.log("Buenas tardes veci")
+            } else {
+                console.log("Buenos noches veci")
+            }
+
+            /* operador ternario (condicion) verdadero o falso simplificacion del if */
+            console.log("Operador Ternario **");
+
+            let eresMayor = (edad >= 18)
+            ? "Eres mayor de edad" //parte verdadera
+            :"Eres menor de edad"; //parte falsa
+
+            console.log(eresMayor);
+
+            /* swtich-case */
+            let dia = 12;
+
+            switch(dia){
+                case 0:
+                    console.log("Domingo");
+                    break; // get out of the loop
+
+                case 1:
+                    console.log("Lunes");
+                    break;
+                    
+                case 2:
+                    console.log("Martes");
+                    break;
+                    
+                case 3:
+                    console.log("Miercoles");
+                    break;
+                    
+                case 4:
+                    console.log("Jueves");
+                    break;
+                    
+                case 5:
+                    console.log("Viernes");
+                    break;
+                    
+                case 6:
+                    console.log("Sabado");
+                    break;
+
+                default:
+                    console.log("El dia no existe");
+                    break;
+            }
+
+
+
+
+
+
 
 
 
