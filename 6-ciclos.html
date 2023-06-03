@@ -5,23 +5,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+        <style>
+            #hello {
+                border: solid 1px white;
+            }
+        </style>
 </head>
 <body style="background-color: black; color: aliceblue;">
     <div>
         <h1>Control structures</h1>
         <h2>Secuencial - (one trough the other)</h2>
-        <h2 id="hello">Conditional (depending on the result, actions will be executed)
+        <h2>Conditional (depending on the result, actions will be executed)
+        </h2>
+        <h2 id="hello">Loops - or repetitive structures </h2>
             <ul>
-                <li>if / else if / else (main characters) </li>
-                <li> the and && / or || conditionals help the statements</li>
+                <li> While (Siempre evaluar antes de ejecutar)</li>
+                <li> Do - While (siempre se ejecuta la funcion al menos 1 vez y despues evalua)</li>
                 <li>Operador ternario (simplyfy the if sentence in a line) "common in React Vue Angular to render"</li>
             </ul>
 
-
-        </h2>
-        <h2>Loops - or repetitive structures </h2>
-
         <script>
+            /* Loop while Not for this kind of loops  */
+
+            let contador = 5;
+
+            while(contador < 10){
+                console.log("While" + contador);
+                contador++;
+            }
+
+            /* do while  (not used) */
+
+            do{
+                console.log("do while: "+ contador);
+                contador++;
+            }while(contador < 10);
+
+            /* for */
+
+            // for (inicializacion de variable; condicion; decremento o incremento)
+
+            for (let i = 0; i < 10; i++) {
+                console.log("for"+i);
+            }
+
+            /*recorrer un arreglo con for */
+
+            let numeros = [10,20,30,40,50,60,70,80,90];
+
+            for (let i = 0; i < numeros.length; i++){
+                console.log(numeros[i]);
+            }
+
+            /* for in  para objetos -- recorre las propiedades de un objeto o arreglo */
+
+            const jon ={
+                nombre:"jon",
+                apellido: "mircha",
+                edad:35
+            }
+
+            // for (const propiedad in jon) {
+            //     console.log(propiedad);
+            // }
+
+            for (const propiedad in jon) {
+                console.log(`Key: ${propiedad}, Value: ${jon[propiedad]} `);
+                // no notacion de punto
+            }
+
         </script>
 
     </div>
