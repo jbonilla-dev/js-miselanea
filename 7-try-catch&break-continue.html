@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+            #hello {
+                border: solid 1px white;
+            }
+        </style>
+        </head>
+        
+        <body style="background-color: black; color: aliceblue;">
+
+            <h1> Try catch and Break / continue (handle errors)</h1>
+
+            <ul>
+                <li>Try - catch and conditions to handle and show errors on the code</li>
+            </ul>
+
+
+            <script>
+
+                //try catch function
+
+                try {
+                    console.log("En el Try se agrega el codigo a evaluar");
+                    noExiste;
+                    console.log("Segundo mensaje en el Try");
+                    
+                } catch (error) {
+                    console.log("Catch, captura cualquier error surgido o lanzado en el try");
+                }finally{
+                    console.log("El bloque finally siempre al final de un bloque try-catch")
+                }
+
+                console.log("*****************************************");
+
+                //Function with an if conditional
+                try {
+                    let numero = "diez";
+                    if(isNaN(numero)){ //funcion determina si es un numero = true
+                        throw new Error("el caracter introducido no es un numero");  //tirar error personalizado
+
+                    }
+                    console.log("Multiplicacion:",numero*numero);                    
+                } catch (error) {
+                    console.log(`Se produjo el siguiente error: ${error}`);
+                }
+
+
+
+            </script>
+    
+</body>
+</html>

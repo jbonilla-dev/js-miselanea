@@ -22,6 +22,7 @@
                 <li> While (Siempre evaluar antes de ejecutar)</li>
                 <li> Do - While (siempre se ejecuta la funcion al menos 1 vez y despues evalua)</li>
                 <li>Operador ternario (simplyfy the if sentence in a line) "common in React Vue Angular to render"</li>
+                <li> Loop "For of" useful mostly for arrays also strings</li>
             </ul>
 
         <script>
@@ -73,6 +74,22 @@
                 console.log(`Key: ${propiedad}, Value: ${jon[propiedad]} `);
                 // no notacion de punto
             }
+
+            /* for of para cualquier item iterable (mostly arrays) */
+            
+            for (const elemento of numeros) {
+                console.log(elemento);
+            }
+
+            let cadena = "Hola Mundo"; // tambien iterable
+
+            for (const caracter of cadena) {
+                console.log(caracter);
+                
+            }
+
+
+
 
         </script>
 
