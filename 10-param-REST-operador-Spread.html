@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest and Spread</title>
+    <style>
+        body{
+            background-color: black;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Parametros REST y operadores spread</h1>
+
+    <ul>
+        <li>
+
+        </li>
+    </ul>
+
+    <script>
+        // parametro REST ...c infinitas variables - PARAMETROS QUE RECIBE UNA FUNCION 
+        function sumar(a,b, ...c){
+            let resultado = a + b;
+
+            //bucle para sumar  en el array cada new variable
+            c.forEach(function(n){
+                resultado += n
+            });
+
+            return resultado;
+        }
+
+        console.log(sumar(1,2));
+        console.log(sumar(1,2,3));
+        console.log(sumar(1,2,3,4));
+        console.log(sumar(1,2,3,4,5));
+
+
+        // operador de propagacion SPREAD - SE PUEDE EJECUTAR EN CUALQUIER SENTENCIA DE CODIGO
+
+        const arr1 = [1,2,3,4,5],
+              arr2 = [6,7,8,9,0];
+
+        console.log(arr1, arr2);
+
+        const arr3 = [arr1, arr2];
+        console.log(arr3);
+
+        //CREA UN SOLO ARREGLO CONCATENANDO LOS DOS ANTERIORES
+        const arr4 = [...arr1, ...arr2];
+        console.log(arr4);
+
+
+
+
+    </script>
+    
+</body>
+</html>

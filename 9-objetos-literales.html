@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos literales</title>
+    <style>
+        body{
+            background-color: black;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h1> Objetos literales</h1>
+    <ul>
+        <li>Si la variable que se va a asignar como valor a una propiedad de objeto, tiene el mismo nombre que una ya existente, reutilizarla </li>
+    </ul>
+
+    <script>
+        let nombre = "firulais",
+            edad = 7;
+        
+        // CREACION DE OBJETO
+
+        const perro ={
+            nombre: nombre, //atributo
+            edad: edad,
+            ladrar: function() { //funcion como metodo
+                console.log("guau guau! practicamente");
+            }
+        }
+
+    console.log(perro);
+
+    perro.ladrar();
+
+    
+    // reutilizar variables dentro de los objetos
+    const dog ={
+        nombre,
+        edad,
+        raza: "Criollo",
+        ladrar(){
+            console.log("que se dice?")
+        }
+    }
+
+    console.log(dog);
+
+
+    </script>
+    
+</body>
+</html>
