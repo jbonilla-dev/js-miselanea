@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototipos</title>
+    <style>
+        body{
+            background-color: black;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Programacion Orientada a Objetos</h1>
+    <hr>
+
+    <h3>Prototipos</h3>
+
+    <ul>
+        <li></li>
+    </ul>
+
+    <script>
+        /*clase modelo a seguir *idea de la silla
+        Objetos - instancia de una clase (instancia - copia de modelo a seguir) *objeto representado de la silla
+        Atributos - es una caracteristica de una objet *la silla es de madera
+        Metodo - acciones que puede realizar la sila * reclinarse
+
+        clases simplifica los prototipos
+        */
+
+        //OBJETO LITERAL
+        const animal = {
+            nombre: "Snoopy",
+            sonar(){
+                console.log("sonido");
+            }
+        }
+
+        console.log(animal);
+
+        const animal2 = {
+            nombre: "Lola Bunny",
+            sonar(){
+                console.log("sonido");
+            }
+        }
+
+        console.log(animal2);
+
+        //CON LAS CLASES GENERO UN PROTOTIPO PARA CREAR ANIMALES(OBJETOS) Y NO TENER QUE COPIAR OBJETOS
+
+        //---- FUNCION CONSTRUCTORA - la maquina de galletas- prototipo
+        function Animal(nombre,genero){
+            //atributos y metodos tienen que colgar de this
+            this.nombre = nombre;
+            this.genero = genero;
+
+            this.sonar = function(){
+                console.log("sonido guau!")
+            }
+
+            this.saludar = function(){
+                console.log(`Hola me llamo ${nombre}`);
+            }
+        }
+
+        //volver a generar las instancias
+        //new (crear nuevo objeto)
+        const snoopy = new Animal("Snoopy","Macho"),
+              lolaBunny = new Animal("Lola","Hembra");
+
+        console.log(snoopy);
+        console.log(lolaBunny);
+
+        //funcion constructora donde asignamos los metodos al prototipo, no a la funcion como tal
+        //evitar duplicados
+
+        // function Animal(nombre,genero){
+        //     this.nombre = nombre;
+        //     this.genero = genero;
+        // }
+
+
+        // Animal.prototype.sonar = function(){
+        //     console.log("sonido guau!")
+        // }
+
+        // Animal.prototype.saludar = function(){
+        //     console.log(`Hola me llamo ${nombre}`);
+        // }
+
+
+
+
+
+        
+
+
+
+    </script>
+</body>
+</html>
