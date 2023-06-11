@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+    <style>
+        body{
+            background-color: black;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Arrow Functions</h1>
+
+    <ul>
+        <li>Sintaxis that helps to save time on the process of create a fuction and their statements</li>
+        <li>Capable of capture the context of the object they're within</li>
+    </ul>
+
+    <script>
+        //quitar palabra fuction y poner flecha
+        const saludar = () => {
+            console.log("Hola");
+        }
+
+        // Una sola linea de instruccion omitir llaves
+        // const saludar = () => console.log("Hola");
+        saludar();
+
+        const saludo1 = nombre => console.log(`Hola ${nombre}`);
+        saludo1("Gonzo"); //return implicito
+
+        // const sumar = function(a,b){
+        //     return a+ b;
+        // }
+
+        const sumar = (a,b) =>  a+ b;
+
+        console.log(sumar(8,9));
+
+        const numeros = [1,2,3,4,5];
+
+        // numeros.forEach(function(el,index){
+        //     console.log(`El elemento ${el} esta en la posicion ${index}`)
+        // })
+
+        //limpiando codigo
+        numeros.forEach((el,index) => console.log(`El elemento ${el} esta en la posicion ${index}`));
+
+        //FUNCTION THIS
+        // function Perro (){
+        //     console.log(this);
+        // }
+        // Perro();
+
+        const perro ={
+            nombre:"firulais",
+            ladrar:() => {
+                console.log(this);  //objeto window con arrow function (capturan el contexto del objeto en el que se encuentran)
+            }
+        }
+
+        //salta el contexto y maneja el contexto padre
+
+        perro.ladrar();
+
+        
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
