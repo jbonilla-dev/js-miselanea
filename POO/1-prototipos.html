@@ -18,7 +18,7 @@
     <h3>Prototipos</h3>
 
     <ul>
-        <li></li>
+        <li>Javascript convierte las clases a prototypes (use prototypes)</li>
     </ul>
 
     <script>
@@ -90,6 +90,61 @@
         // Animal.prototype.saludar = function(){
         //     console.log(`Hola me llamo ${nombre}`);
         // }
+
+        // HERENCIA PROTOTIPICA
+
+        //PROTOTYPE PERRO QUE HEREDA LAS PROPIEDADES
+        function Perro(nombre, genero, tamanio) {
+            this.super = Animal; //super manda llamar el contructor de la clase padre
+            this.super(nombre,genero); // propiedades antiguas
+            this.tamanio = tamanio; // propiedad nueva
+        }
+
+        // Perro esta heredando de Animal
+        Perro.prototype = new Animal();
+        Perro.prototype.constructor = Perro;  //puede usar los ATRIBUTOS heredados
+
+
+        //Sobreescritura de METODOS del Prototipo padre en el hijo
+        Perro.prototype.sonar = function(){
+            console.log("Soy un perro y mi sonido es un ladrido")
+        }
+        
+        Perro.prototype.ladrar = function() {
+            console.log("Guauu Guauu che!");
+        }
+
+        const snoopy1 = new Perro("Snoopy","Macho", "Mediano"),
+              lolaBunny1 = new Animal("Lola","Hembra");
+
+        console.log(snoopy1,lolaBunny1);
+
+        snoopy1.sonar();
+        snoopy1.saludar();
+        snoopy1.ladrar();
+
+
+        lolaBunny1.sonar();
+
+        // class Animal{
+        //     Constructor es un metodo especial que se ejecuta en el momento de instanciar una clase
+        //     contructor(nombre, genero){
+        //         this.nombre = nombre;
+        //         this.genero = genero;
+        //     }
+        // }
+
+        // METODOS
+        // sonar() {
+        //     console.log("Hago sonido de perro");
+        // }
+
+        // saludar() {
+        //     console.log("Hago sonido de perro");
+        // }
+
+
+
 
 
 
