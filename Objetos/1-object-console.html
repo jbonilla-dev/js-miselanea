@@ -18,6 +18,15 @@
         <li>
             //log registro de lo que pasa en nuestra app0
         </li>
+        <li>
+            console.log(document); representacion del documento HTML en javascript.
+        </li>
+        <li>
+            representar outputs con tablas en la consola (console.table(perro);)
+        </li>
+        <li>
+            time for one execution.
+        </li>
     </ul>
 
     <script>
@@ -31,8 +40,70 @@
         //Mensaje informativo
         console.info("Esto es un mensaje informativo");
 
-        
+        //limpiar consola
+        // console.clear();
 
+        //objeto global de javascript en los navegadores (ventana del navegador)
+        console.log(window);
+        console.log(document); //representacion del documento html a traves de javascript
+        //muestra contenido de html
+
+        console.dir(window); // window es un objeto -se representa igual
+        console.dir(document); //(representado como objeto) muestra las propiedades del HTML
+
+        console.group("Cursos de @Jhonmircha en Youtube");
+        console.log("Curso de Javascript")
+        console.log("Curso de NodeJs")
+        console.log("Curso de PWAs")
+        console.log("Curso de Flexbox")
+        console.log("Curso de Diseño y programacion web")
+        console.groupEnd();
+
+        //representacion por tabla
+        console.table(Object.entries(console).sort()); //por orden alfabetico
+
+        //en arrays
+        const numeros = [1,2,3,4,5],
+              vocales = ["a","e","i","o","u"];
+
+        console.table(numeros);
+        console.table(vocales);
+
+        //en objects
+        const perro ={
+            nombre:"Boni",
+            raza: "Boxer",
+            color:"cafe"
+        }
+
+        console.table(perro);
+
+        //time for one execution
+
+        console.time("Cuanto tiempo tarda mi codigo");
+        
+        const arreglo = Array(1000000);
+
+        for(let i=0; i < arreglo.length; i++){
+            arreglo[i]= i;
+        }
+
+        console.timeEnd("Cuanto tiempo tarda mi codigo");
+
+
+        //HOW MANY TIMES A CODE WAS EXECUTED (like testing library)
+
+        for(let i=0; i<20; i++){
+            console.count("codigo for");
+            console.log(i);
+        }
+
+        //testing example
+        let x = 3,
+            y = 2,
+            pruebaXY ="Se espera que X siempre sea menor que Y";
+
+        console.assert( x < y, {x,y,pruebaXY}); // nothing when testing is successful
 
 
 
