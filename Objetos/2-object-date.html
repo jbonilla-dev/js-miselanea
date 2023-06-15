@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Date</title>
+    <style>
+        body{
+            background-color: black;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Object Date</h1>
+    <hr>
+
+    <ul>
+        <li>
+            constructor o metodo Date
+        </li>
+    </ul>
+
+    <script>
+        console.log(Date());
+
+        let fecha = new Date();
+        console.log(fecha);
+
+        //dia de mes
+        console.log(fecha.getDate());
+        console.log(fecha.getDay()); //0,1,2,3 - wednesday
+
+        //tiempo y fecha
+        console.log(fecha.toLocaleString());
+        console.log(fecha.toLocaleDateString());
+        console.log(fecha.toLocaleTimeString());
+
+        //Fecha time stamp
+        console.log(Date.now()); //representar el instante - segundos desde el 1 enero de 1970 (time stamp)
+        // calcular fecha exacta restar y operarla
+
+        //Libreria moment.js (expresar el tiempo pasado en publicaciones)
+
+
+
+
+
+
+
+    </script>
+    
+
+
+
+</body>
+</html>
