@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert confirm prompt</title>
+    <style>
+        body{
+            background-color: black;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alert confirm and prompt</h1>
+    <ul>
+        <li>
+            Alert: ventana emergente (no es necesario colocar el window.)
+        </li>
+        <li>
+            Confirm:
+        </li>
+        <li>
+            Prompt:
+        </li>
+    </ul>
+
+    <script>
+        console.log(window); //propiedades de ventana navegador (metodos)
+
+        // window.alert("Que se dice padrecito");
+        //boton aceptar o cancelar
+        // window.confirm("Bien o no mi rey?"); 
+
+        // window.prompt("Por favor ingrese un numero:")
+
+        let alerta = alert ("Hola que hace?"),
+            confirmacion = confirm("Hola esto es una confirmacion"),
+            aviso = prompt("Hola esto es un aviso para ingresar un valor");
+
+        console.log(alerta); // undefined
+        console.log(confirmacion); //true o false
+        console.log(aviso); //number or string
+
+
+
+    </script>
+    
+</body>
+</html>
