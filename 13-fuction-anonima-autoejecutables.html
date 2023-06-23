@@ -12,13 +12,66 @@
     </style>
 </head>
 <body>
+    <h1>Funcion anonima</h1>
     <ul>
         <li>
+            funcion anonima - encapsulacion del codigo (siempre usar punto y coma within this type of function)
+        </li>
+        <li> 
+            example - Jquery 
+        </li>
+        <li> Bear in mind: (document: representa la estructura del html ) (window: objeto global )  (console: tool para comprobar lo programado)</li>
 
+        <li>
+            patron usado cuando no se podian importar librerias
+        </li>
+        <li>
+            Diferentes formas de declarar la funcion anonima en JS
         </li>
     </ul>
 
     <script>
+        //funcion anonima autoejecutable (within parentesis)
+
+        (function() {
+            console.log("Mi primer IIFE");
+        })();
+
+        //antes de que llegaran los modulos - patron usado
+        (function(d, w, c) {
+            console.log("Mi segunda IIFE");
+            console.log(d);
+            console.log(w);
+            c.log("Este es un console.log")
+        })(document, window, console);
+
+        //Formas de escribir las funciones Anonimas Autoejecutable
+
+        //Clasica
+        (function (){
+            console.log('versión Clásica')
+        })();
+
+        //La Crockford ( JavaScript The Good Parts)
+        ((function (){
+            console.log('versión Crockford')
+        })());
+
+        //Unitaria
+        +function (){
+            console.log('versión Unitaria')
+        }();
+
+        //Facebook
+        !function (){
+            console.log('versión Facebook')
+        }();
+
+
+
+
+        // alert("Hola");
+
         
     </script>
 </body>
