@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular expressions</title>
+    <style>
+        body{
+            background-color: black;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h1> Regular expresions</h1>
+
+    <ul>
+        <li> Wikipedia regular expresions - universal language </li>
+    </ul>
+
+    <script>
+        let cadena ="lorem ipsum dolor sit amet consecteur adipising elit. Voluptatem fuga cupiditate dolores saepe."
+
+        let expReg = new RegExp("lorem","i"); // i -- ignora mayusculas o minusculas   g --- busca todas las coincidencias
+        let expReg2 = /[09]/ig;
+
+        //prueba para el expreg
+        console.log(expReg.test(cadena));
+        console.log(expReg.exec(cadena));
+
+        console.log(expReg2.test(cadena));
+        console.log(expReg2.exec(cadena));
+        
+
+
+
+
+    </script>
+    
+</body>
+</html>
