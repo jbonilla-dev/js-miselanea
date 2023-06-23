@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operador Cortocircuito</title>
+    <style>
+        body{
+            background-color: black;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Operadores de corto circuito</h1>
+    <ul>
+        <li>
+            Operadores con OR (cuando el valor de la izquierda en la expresion, siempre puede validar a true- valor que cargara por defecto)
+        </li>
+        <li>
+            Operadores con AND (el valor de la izquierda pueda validar a false, es el valor que se cargara por defecto)
+        </li>
+    </ul>
+
+    <script>
+        function saludar(nombre = "Desconocido") {
+            nombre = nombre || "Desconocido"; // --valor corto circuito
+            console.log(`Hola ${nombre}`);
+        }
+
+        saludar("Jon");
+        saludar();
+
+        //siempre que el valor tienda a verdadero lo va a imprimir (truty and falsy)
+
+        //******************************************OR  (TIENDAN A VERDADERO)
+        console.log("********truty and falsy explanation:")
+        //TRUES
+        console.log("cadena"||"Valor de la derecha");
+        console.log(19||"Valor de la derecha");
+        console.log(true||"Valor de la derecha");
+        console.log([]||"Valor de la derecha");
+        console.log({}||"Valor de la derecha");
+
+        //FALSEs
+        console.log(false||"Valor de la derecha");
+        console.log(null||"Valor de la derecha");
+        console.log(undefined||"Valor de la derecha");
+        console.log(""||"Valor de la derecha");
+        console.log(-2||"Valor de la derecha");
+        console.log(0||"Valor de la derecha");
+
+        //******************************************* AND  (VALORES QUE TIENDAN A FALSO)
+
+        //FALSES
+        console.log("****************AND VERSION")
+        console.log(false && "Valor de la derecha");
+        console.log(null && "Valor de la derecha");
+        console.log(undefined && "Valor de la derecha");
+        console.log("" && "Valor de la derecha");
+        console.log(-2 && "Valor de la derecha"); //tiende a verdadero
+        console.log(0 && "Valor de la derecha");
+
+        //TRUES
+        console.log("cadena" && "Valor de la derecha");
+        console.log(19 && "Valor de la derecha");
+        console.log(true && "Valor de la derecha");
+        console.log([] && "Valor de la derecha");
+        console.log({} && "Valor de la derecha");
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
