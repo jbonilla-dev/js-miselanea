@@ -16,6 +16,43 @@
 
     <script>
 // 1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
+    function countText(text){
+        let text2 = text.toString();
+        console.log(`Your text has ${text2.length} characters`);
+    }
+
+    countText("hello");
+
+    // ********PRACTICE
+
+
+    function countText2(text){
+        console.log(text.length);
+        console.log(text.toUpperCase()); //not error with numbers
+        console.log(text.trim()); // DELETE SPACE on the beginning and end of a string
+        console.log(text.charCodeAt(2)); //codigo ASCII del index
+        console.log(text.slice(0,10)); // CUT a piece of code
+    }
+
+    countText2(" cuarenta y veinte");
+
+    //Convert to string
+    function aString(cadena){
+    try  {
+        let cadena2 = cadena.toString();
+        console.log(`El dato ingresado es: ` + typeof cadena2);
+
+    } catch {
+        console.log("Please type a valid text");
+    }
+    }
+
+    aString("h");
+
+
+
+
+
 
 
 // 2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
