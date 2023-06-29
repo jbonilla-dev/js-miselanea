@@ -16,12 +16,35 @@
 
     <script>
 // 1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
+
+console.log("-*************** EXCERCISE I ")
+
+    // EAZY E
     function countText(text){
         let text2 = text.toString();
         console.log(`Your text has ${text2.length} characters`);
     }
 
-    countText("hello");
+    countText("hi Pit");
+
+    //BETTER
+    function contarText (texto) {
+
+        let contador = 0;
+        let array1 = texto.split(" ");
+        //console.log(`Input: ${array1}`); //print content
+        //console.log(array1); //print the array
+        for (let i = 0; i < array1.length; i++) {
+            contador++;
+        }
+
+        return console.log(`Your text has ${contador} characters`)
+
+    }
+
+    contarText("uno dos tres cuatro");
+
+    console.log("-*************** PRACTICE ")
 
     // ********PRACTICE
 
@@ -73,10 +96,42 @@
 
 // 3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
 
+    console.log("-*************** EXCERCISE III ")
+
+    function disJoin (text) {
+        // let texto2 = text.toString();
+        // console.log(`El dato ingresado es: ${typeof texto2}`);
+        // let array1 = [texto2];
+        let array2 = text.split(" ");
+        // console.log(array1);
+        console.log(array2);
+    }
+
+    disJoin(`que se dice veci`);
+
 
 
 
 // 4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
+
+console.log("-*************** EXCERCISE IV ")
+
+    function rePeter (text, times) {
+
+        // let texto1 = text.toString();
+        let i = 0;
+
+        while ( i < times) {
+            console.log(`Input: ${text}/ Counter: ${i}`);
+            // console.log(text);
+            i++;
+        }
+        
+    }
+
+    rePeter("Sup bro!",3);
+
+
 
 
 
