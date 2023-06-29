@@ -9,10 +9,22 @@
             background-color: black;
             color: aliceblue;
         }
+
+        h1{
+            align-content: center;
+        }
+
+        h1:hover {
+            transition-duration: 0.6s;
+            transform: scale(10);
+            color: blueviolet;
+        }
     </style>
 </head>
 <body>
     <h1>Ejercicios 1</h1>
+
+    <h1 id="ejemplo"></h1>
 
     <script>
 // 1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
@@ -25,7 +37,7 @@ console.log("-*************** EXCERCISE I ")
         console.log(`Your text has ${text2.length} characters`);
     }
 
-    countText("hi Pit");
+    countText("Hola Peter");
 
     //BETTER
     function contarText (texto) {
@@ -33,16 +45,20 @@ console.log("-*************** EXCERCISE I ")
         let contador = 0;
         let array1 = texto.split(" ");
         //console.log(`Input: ${array1}`); //print content
-        //console.log(array1); //print the array
-        for (let i = 0; i < array1.length; i++) {
+        console.log(array1); //print the array
+        let array2 = array1.join();
+        // console.log(typeof array2);
+
+        for (let i = 0; i < array2.length; i++) {
             contador++;
+            if (array2[i] === "," || array2[i] === "." ) {
+                // console.log(array2[i]);
+                contador--;
+            }   
         }
-
-        return console.log(`Your text has ${contador} characters`)
-
+        return console.log(`Your text has ${contador} characters (Better)`)
     }
-
-    contarText("uno dos tres cuatro");
+    contarText("Hola Peter");
 
     console.log("-*************** PRACTICE ")
 
@@ -76,19 +92,24 @@ console.log("-*************** EXCERCISE I ")
 
 // 2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
 
+
+  
     console.log("-*************** EXCERCISE II ")
 
+      // EAZY E
     function textCut (text, cut) {
         let text2 = text.toString();  
         // console.log(`El dato ingresado es: ` + typeof text2);            
         // console.log(`El dato ingresado es: ${text2}`);
         console.log(`El texto seleccionado es: ${text2.slice(0,cut)}`);
+        // alert(text2.slice(0,cut));
+        document.getElementById("ejemplo").innerHTML= text2.slice(0,cut);
         
 
 
     }
 
-    textCut("billionaire mindset", 11);
+    textCut("Hello world", 16); 
 
     //NOTE: launch error when user types a string without comas **
 
