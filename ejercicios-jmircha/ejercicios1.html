@@ -104,8 +104,7 @@ console.log("-*************** EXCERCISE I ")
         console.log(`El texto seleccionado es: ${text2.slice(0,cut)}`);
         // alert(text2.slice(0,cut));
         document.getElementById("ejemplo").innerHTML= text2.slice(0,cut);
-        
-
+    
 
     }
 
@@ -119,16 +118,36 @@ console.log("-*************** EXCERCISE I ")
 
     console.log("-*************** EXCERCISE III ")
 
-    function disJoin (text) {
+    //EASY
+    function disJunte (texto) {
         // let texto2 = text.toString();
         // console.log(`El dato ingresado es: ${typeof texto2}`);
         // let array1 = [texto2];
-        let array2 = text.split(" ");
+        let array2 = texto.split(" ");
         // console.log(array1);
         console.log(array2);
     }
 
-    disJoin(`que se dice veci`);
+    disJunte(`que se dice veci`);
+
+
+    //BETTER
+    function disJoin (text){
+        let array1 = [text];
+        console.log( array1);
+        for (let i = 0; i < array1[0].length; i++) {
+            
+            array2 = array1[i];
+            console.log(array1[i]);                                
+                // const element = array[i];
+        }
+
+        console.log(array2);
+        
+    }
+
+    disJoin("Prove it bro")
+
 
 
 
