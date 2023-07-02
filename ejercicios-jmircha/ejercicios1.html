@@ -132,21 +132,40 @@ console.log("-*************** EXCERCISE I ")
 
 
     //BETTER
+    let array2 = [];
+
     function disJoin (text){
         let array1 = [text];
         console.log( array1);
-        for (let i = 0; i < array1[0].length; i++) {
-            
-            array2 = array1[i];
-            console.log(array1[i]);                                
-                // const element = array[i];
+
+        for (let x in array1) {
+            for (let y in array1[x]) {
+                if (array1[x][y] === " " || array1[x][y] === "," ) {
+                // x++;
+                array2.push(",")
+                // continue;
+                } else{
+                    array2.push(array1[x][y]);
+                }
+            }
         }
 
-        console.log(array2);
+    console.log(array2);
+
+    // while (array1[x][y] === " " || array1[x][y] === ",") {
         
+    // }
+
+        // for (let i = 0; i < array1.length; i++) {
+            
+        //     array2 = array1[i];
+        //     console.log(array1[i]);                                
+        // }
+
+        // console.log(array2);
     }
 
-    disJoin("Prove it bro")
+    disJoin("done it bro")
 
 
 
