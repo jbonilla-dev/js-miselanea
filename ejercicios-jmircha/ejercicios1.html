@@ -125,7 +125,7 @@ console.log("-*************** EXCERCISE I ")
         // let array1 = [texto2];
         let array2 = texto.split(" ");
         // console.log(array1);
-        console.log(array2);
+        console.log("The result is: " + array2);
     }
 
     disJunte(`que se dice veci`);
@@ -133,6 +133,7 @@ console.log("-*************** EXCERCISE I ")
 
     //BETTER
     let array2 = [];
+    let array3 = [];
 
     function disJoin (text){
         let array1 = [text];
@@ -140,17 +141,25 @@ console.log("-*************** EXCERCISE I ")
 
         for (let x in array1) {
             for (let y in array1[x]) {
+
+                // array2.push(array1[x][y]);
                 if (array1[x][y] === " " || array1[x][y] === "," ) {
-                // x++;
-                array2.push(",")
-                // continue;
-                } else{
-                    array2.push(array1[x][y]);
-                }
+                    // array3 = array2.join('');
+                    array2.push(".");
+                    // continue;
+                 } else{
+                     array2.push(array1[x][y]);
+                    //  array2.join('');
+                     
+                 }
             }
+             array3 = array2.join(".");
         }
 
+
+
     console.log(array2);
+    console.log([array3.slice(".")]);
 
     // while (array1[x][y] === " " || array1[x][y] === ",") {
         
@@ -165,7 +174,7 @@ console.log("-*************** EXCERCISE I ")
         // console.log(array2);
     }
 
-    disJoin("done it bro")
+    disJoin("ab bc")
 
 
 
