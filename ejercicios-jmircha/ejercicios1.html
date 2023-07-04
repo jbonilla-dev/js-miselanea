@@ -131,6 +131,7 @@ console.log("-*************** EXCERCISE I ")
     disJunte(`que se dice veci`);
 
 
+    console.log("Better ---------- :)")
     //BETTER
     
     let array2 = [];
@@ -140,27 +141,44 @@ console.log("-*************** EXCERCISE I ")
         let array1 = [text];
         console.log( array1);
 
-        for (let x in array1) {
-            for (let y in array1[x]) {
+        let x = 0;
+        let X = 0;
+        let y = 0;
+        let Y = 0;
 
+
+        for (x in array1) {
+            for (y in array1[x]) {
                 // array2.push(array1[x][y]);
                 if (array1[x][y] === " " || array1[x][y] === "," ) {
                     // array3 = array2.join('');
+                    array3 = array3.concat(array3[x]); //----> here checking
                     array2.push(".");
+                    
+
                     // continue;
                  } else{
-                     array2.push(array1[x][y]);
+                     array3 = array2.push(array1[x][y]) ;
                     //  array2.join('');
                      
                  }
             }
-             array3 = array2.join(".");
+
         }
+        console.log ("try", array3 = array2.join());
+        console.log("try2", array3.split("."))
+
+        console.log("try3:", [array3]);
+
+        // for (let i in array3) {
+        //     console.log("try3", array3[i]);
+
+        // }
 
 
 
     console.log(array2);
-    console.log([array3.slice(".")]);
+    console.log([array3]);
 
     // while (array1[x][y] === " " || array1[x][y] === ",") {
         
@@ -175,7 +193,7 @@ console.log("-*************** EXCERCISE I ")
         // console.log(array2);
     }
 
-    disJoin("ab bc")
+    disJoin("Almosto done bro")
 
 
 
