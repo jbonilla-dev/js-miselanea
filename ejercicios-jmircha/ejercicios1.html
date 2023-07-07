@@ -136,6 +136,7 @@ console.log("-*************** EXCERCISE I ")
     
     let array2 = [];
     let array3 = [];
+    let array4 = [];
 
     function disJoin (text){
         let array1 = [text];
@@ -152,45 +153,33 @@ console.log("-*************** EXCERCISE I ")
                 // array2.push(array1[x][y]);
                 if (array1[x][y] === " " || array1[x][y] === "," ) {
                     // array3 = array2.join('');
-                    array3 = array3.concat(array3[x]); //----> here checking
-                    array2.push(".");
+                    array1[x][y] = array1.push(".");
                     
 
                     // continue;
                  } else{
-                     array3 = array2.push(array1[x][y]) ;
+                    //  array3 = array2.push(array1[x][y]) ;
+                    continue;
+
                     //  array2.join('');
                      
                  }
             }
 
         }
-        console.log ("try", array3 = array2.join());
-        console.log("try2", array3.split("."))
 
-        console.log("try3:", [array3]);
+        // array1.splice([3],0,"t");
+        console.log( "arr1:", array1);
+        console.log( "arr2:", array2);
+        // console.log ("try", array3 = array2.join());
+        // console.log("try2", array4 = array3.split("."))
+        // console.log("try3:", array4 );
 
-        // for (let i in array3) {
-        //     console.log("try3", array3[i]);
-
-        // }
-
-
-
-    console.log(array2);
-    console.log([array3]);
-
-    // while (array1[x][y] === " " || array1[x][y] === ",") {
+        // let array5 = [];
         
-    // }
-
-        // for (let i = 0; i < array1.length; i++) {
-            
-        //     array2 = array1[i];
-        //     console.log(array1[i]);                                
-        // }
-
-        // console.log(array2);
+        // array5 = array5.concat(array4[0]);
+        // console.log("tryEND:", array5 );
+        
     }
 
     disJoin("Almosto done bro")
