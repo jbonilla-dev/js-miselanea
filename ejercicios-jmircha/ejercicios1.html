@@ -45,7 +45,7 @@ console.log("-*************** EXCERCISE I ")
         let contador = 0;
         let array1 = texto.split(" ");
         //console.log(`Input: ${array1}`); //print content
-        console.log(array1); //print the array
+        //console.log(array1); print the array
         let array2 = array1.join();
         // console.log(typeof array2);
 
@@ -59,6 +59,26 @@ console.log("-*************** EXCERCISE I ")
         return console.log(`Your text has ${contador} characters (Better)`)
     }
     contarText("Hola Peter");
+
+    // ********JHON SOLUTION
+
+    function contarCaracteres(cadena= ""){
+    if(!cadena){
+        console.warn("There's no data yet");
+    }else{
+        console.info(`The string has "${cadena}" tiene ${cadena.length} caracteres`);
+    }
+}
+    contarCaracteres("helo");
+
+    //OPERADOR TERNARIO AND FUNCION FLECHA
+    const contarCaracteres2 = (cadena="") => 
+        (!cadena) 
+        ? console.warn("No data entered")
+        : console.info(`The string has "${cadena}" tiene ${cadena.length} caracteres`);
+
+    contarCaracteres2("helo");
+
 
     console.log("-*************** PRACTICE ")
 
@@ -111,6 +131,20 @@ console.log("-*************** EXCERCISE I ")
     textCut("Hello world", 16); 
 
     //NOTE: launch error when user types a string without comas **
+
+    console.log("-*************** jhon solution ")
+
+// using arrow function (codigo expresado)
+    const recortarTexto =(cadena="",longitud = undefined) =>
+    (!cadena)
+        ?console.warn("no data entered")
+        :(longitud === undefined)
+            ?console.warn("no length for the cut provided")
+            :console.info(cadena.slice(0,longitud));
+
+    recortarTexto("Hola Mundo");
+
+
 
 
 
@@ -194,8 +228,16 @@ console.log("-*************** EXCERCISE I ")
 
     disJoin("Almosto done bro")
 
+    console.log("-*************** jhon solution ")
 
+    const cadenaAArreglo = (cadena="", separador=undefined) =>
+    (!cadena)
+        ?console.warn("no data entered")
+        :(separador === undefined)
+            ?console.warn("no character for the split provided")
+            :console.info(cadena.split(separador));
 
+    cadenaAArreglo("Lorem ipsum let"," ");
 
 
 // 4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
