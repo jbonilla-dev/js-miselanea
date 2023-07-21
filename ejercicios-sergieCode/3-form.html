@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form example</title>
+    <style>
+        body{
+            background-color: black;
+            color: aliceblue;
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        .form-group{
+            border: 1px solid rgb(29, 29, 29);
+            padding: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <form id="formulario">
+        <h2> Formulario de registro</h2>
+
+        <div class="form-group">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name">
+            <div class="error-message" id="nameError"></div>
+        </div>
+
+        
+        <div class="form-group">
+            <label for="email">Correo Electronico:</label>
+            <input type="email" id="email" name="email">
+            <div class="error-message" id="emailError"></div>
+        </div>
+
+        
+        <div class="form-group">
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password">
+            <div class="error-message" id="passwprdError"></div>
+        </div>
+        
+        <button type="submit"> Enviar</button>
+
+        <script src="3-script.js"></script>
+
+    </form>
+    
+</body>
+</html>

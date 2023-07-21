@@ -1,0 +1,1 @@
+//Here we have the connection to firebase
