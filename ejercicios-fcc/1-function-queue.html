@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>queue-cola</title>
+    <style>
+        body {
+            background-color: black;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Creating a queue function</h1>
+
+    <script>
+
+        let array = [1,2,3,4];
+        // console.log(array);
+
+        function proximoEnLaFila(array, nuevoElemento){
+            let primerElemento = array[0];
+            array.shift();
+            array.push(nuevoElemento);
+            console.log("Elemento eliminado: " + primerElemento + " / Nuevo array: " + array);
+        }
+
+        proximoEnLaFila(array, 5);
+
+
+    </script>
+    
+</body>
+</html>
