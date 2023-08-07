@@ -39,29 +39,63 @@
 
 // 6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
 
-function findWord (string, word){
-    let count = 0;
-    let array = string.toLowerCase();
-    array = [array.split(" ")];
-    console.log (array);
-    
-    // separate array 
-    for (let i = 0; i < array.length; i++) {
-         if( array[i] === word){
-             count++
-         }     
-    }
+// function findWord (string, word){
+//     let count = 0;
+//     let array = string.toLowerCase();
+//     array = array.split(" ");
+//     // separate array 
+//     for (let i = 0; i < array.length; i++) {
+//          if( array[i] === word.toLowerCase()){
+//              count++    
+//          }   
+//     };
+//     return count;
+// }
 
-    console.log(count);
-
-
-}
-
-findWord("Hello world","world");
+// console.log(findWord("world World World","World"));
 
 
 // 7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
+
+
+// function palindrome (string){
+
+//     //reverse
+//     let array = [string];
+//     let array2 = "";
+
+//     for (let i = 0; i < array.length; i++) {
+//         for (let j = array[0].length-1; j > -1; j--){
+//              // console.log(array[i][j])
+//             array2 += array[i][j];   
+//         }
+//     }
+//     // console.log(array2);
+
+//     if (string.toLowerCase() === array2.toLowerCase()){
+//         return true;
+//     }else{
+//         return false;
+//     }
+
+// }
+
+// console.log(palindrome("salas"));
+
+
+
+
 // 8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
+
+function deletePattern(string, pattern){
+    array = string.toLowerCase();
+    console.log(array);
+}
+
+
+
+
+
     </script>
     
 </body>
