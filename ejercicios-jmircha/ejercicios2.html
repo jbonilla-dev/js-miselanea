@@ -88,9 +88,32 @@
 // 8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
 
 function deletePattern(string, pattern){
-    array = string.toLowerCase();
-    console.log(array);
+    let arrayString = string.toLowerCase();
+    let arrayPattern = pattern.toLowerCase();
+    //ready
+    arrayString = arrayString.split(",");
+    //lenght
+    let patternLength = pattern.length;
+
+    for (let i = 0; i < arrayString.length; i++) {
+        let beginPattern = arrayString[i].search(arrayPattern);
+        console.log(arrayString.pop());
+
+        console.log(beginPattern);
+
+
+        
+        
+    }
+
+
+
+    // console.log(patternLength);
+
+    // array.search(pattern)
 }
+
+console.log(deletePattern("xYz1, xYz2, xyz3, xyz4, xyz5", "xyz"));
 
 
 
