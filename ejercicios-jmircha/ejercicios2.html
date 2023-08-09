@@ -96,15 +96,22 @@ function deletePattern(string, pattern){
     let patternLength = pattern.length;
 
     for (let i = 0; i < arrayString.length; i++) {
+        // console.log(arrayString.splice(1,2));
         let beginPattern = arrayString[i].search(arrayPattern);
-        console.log(arrayString.pop());
+        let endPattern = beginPattern + 3;
+        let sliceString = arrayString[i];
+        console.log(sliceString)
+        // arrayString.push(sliceString)
+        // arrayString.pop(1,3);
+        // console.log(arrayString);
+        
+        // console.log(arrayString.splice(1, 4));
 
         console.log(beginPattern);
-
-
-        
         
     }
+    console.log(arrayString);
+
 
 
 
