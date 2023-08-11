@@ -94,6 +94,21 @@ function deletePattern(string, pattern){
     arrayString = arrayString.split(",");
     //lenght
     let patternLength = pattern.length;
+    let stringEnd = ""
+
+    function findPattern (string) {
+
+        for (let i = 0; i < arrayPattern.length; i++) {
+            if (arrayPattern[i] === string) {
+                return false;
+            } else{
+                return true;
+            }
+        }
+
+        
+        
+    }
 
     for (let i = 0; i < arrayString.length; i++) {
         // console.log(arrayString.splice(1,2));
@@ -102,27 +117,23 @@ function deletePattern(string, pattern){
         let sliceString = [arrayString[i]];
         for (let j = 0; j < arrayString[i].length; j++) {
             // console.log(arrayString[i][j]);
-            if (arrayString[i][j].find(arrayPattern) === true){
-                console.log(arrayString[i][j]);
-            }
-
-            
+            if (findPattern(arrayString[i][j]) === true){
+                stringEnd += arrayString[i][j];
+            }else{
+                continue;
+            };
         }
+
+
         // console.log(sliceString)
         // arrayString.push(sliceString)
         // console.log(arrayString);
         
         // console.log(arrayString.splice(1, 4));
-        // console.log("pattern" + sliceString);
-
-        
+        // console.log("pattern" + sliceString);        
     }
     // console.log(arrayString);
-
-
-
-
-    // console.log(patternLength);
+    console.log(stringEnd);
 
     // array.search(pattern)
 }
