@@ -90,52 +90,37 @@
 function deletePattern(string, pattern){
     let arrayString = string.toLowerCase();
     let arrayPattern = pattern.toLowerCase();
-    //ready
-    arrayString = arrayString.split(",");
-    //lenght
-    let patternLength = pattern.length;
+    
+    arrayString = arrayString.split("");
     let stringEnd = ""
 
     function findPattern (string) {
         let response;
         for (let r = 0; r < arrayPattern.length; r++) {
-            console.log("pattern: " + arrayPattern[r]);
-            console.log("input: " + string);
+            // console.log("pattern: " + arrayPattern[r]);
+            // console.log("input: " + string);
             if (arrayPattern[r] === string) {
                 response = true;
+                break;
             } else{
                 response = false;
             };
-            console.log("result: " + response);
-
-        }
+            // console.log("result: " + response);
+        };
         return response;
-    }
-    // console.log(findPattern(""));
+    };
 
     for (let i = 0; i < arrayString.length; i++) {
-        // console.log(arrayString.splice(1,2));
-        // let beginPattern = arrayString[i].search(arrayPattern);
-        // let endPattern = beginPattern + 3;
-        // let sliceString = [arrayString[i]];
         for (let j = 0; j < arrayString[i].length; j++) {
-            // console.log(arrayString[i][j]);
-            if (findPattern(arrayString[i][j]) === true){
+            if (findPattern(arrayString[i][j]) !== true){
                 stringEnd += arrayString[i][j];
             }else{
                 continue;
             };
-        }
-        // arrayString.push(sliceString)
-        // console.log(arrayString);        
-        // console.log(arrayString.splice(1, 4));
-        // console.log("pattern" + sliceString);        
-    }
-    // console.log(arrayString);
-    console.log(stringEnd);
-
-    // array.search(pattern)
-}
+        };      
+    };
+    return stringEnd;
+};
 
 console.log(deletePattern("xYz1, xYz2, xyz3, xyz4, xyz5", "xyz"));
 
