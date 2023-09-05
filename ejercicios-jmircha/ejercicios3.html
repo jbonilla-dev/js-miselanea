@@ -129,6 +129,37 @@ const numeroPrimo = (numero = undefined) => {
 //17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
 
 
+//CWARS**
+
+        console.log(`Excercise 20 **********************`);
+
+        function secsToHours(number) {
+
+            //validation
+            if (!number) return console.error("Please input a valid number")
+
+            if (number > 359999) return console.warn("The number can't be higher than 360.000");
+
+            //function
+            let hours = 0;
+            let mins = 0;
+            let secs = 0;
+
+            if (number > 3600) {
+                hours = Math.floor(number / 3600);
+                number -= (hours * 3600);
+            };
+
+            if (number > 60) {
+                mins = Math.floor(number / 60);
+                number -= (mins * 60);
+            };
+            secs = number;
+
+            return (`H: ${hours}, M: ${mins}, S: ${secs}`)
+        }
+
+        console.log(secsToHours(50000))
 
 
 
