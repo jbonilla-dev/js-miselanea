@@ -224,6 +224,7 @@ aplicarDescuento(1000, 20);
 
 //17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
 
+/*
 const calcularAnios = (fecha = undefined) => {
     if (fecha === undefined) return console.warn("No ingresaste la fecha");
 
@@ -246,7 +247,7 @@ const calcularAnios = (fecha = undefined) => {
 calcularAnios(new Date(2084, 4, 23))
 calcularAnios(new Date(1984, 4, 23));
 
-
+*/
 
 // 18) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5.
 
@@ -283,6 +284,7 @@ contarLetras("Hola mundo");
 
 // 19) Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero.
 
+/*
 const validarNombre = (nombre = "") => {
     if (!nombre) return console.warn("No ingresaste un nombre");
 
@@ -300,10 +302,11 @@ const validarNombre = (nombre = "") => {
  validarNombre();
  validarNombre("Jonathan Mircha")
 
+*/
 
 //20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero.
 
-
+/*
 const validarEmail = (email = "") => {
     if (!email) return console.warn("No ingresaste un email");
 
@@ -320,10 +323,33 @@ const validarEmail = (email = "") => {
  validarEmail();
  validarEmail("Jonathan Mircha")
  validarEmail("jonmircha@gmail.com")
-
+*/
 
 
 // 21) Programa una función que dado un array numérico devuelve otro array con los números elevados al cuadrado, pe. mi_funcion([1, 4, 5]) devolverá [1, 16, 25].
+
+const devolverCuadrados = (arr = undefined) => {
+
+    if (arr === undefined) return console.warn("No ingresaste un arreglo de numeros");
+
+    if (!(arr instanceof Array)) return console.error("El valor que ingresaste no es un arreglo");
+
+    if(arr.length === 0) return console.error("El arreglo esta vacio");
+
+    for(let num of arr){
+        if (typeof num !== "number") return console.error(`El valor "${num}" ingresado, NO es un numero`);
+    }
+
+    const newArr = arr.map(el => el * el);
+
+    return console.info(`Arreglo original: ${arr}, \nArreglo elevado al cuadrado ${newArr}`);
+}
+
+devolverCuadrados();
+devolverCuadrados(true);
+devolverCuadrados([1, 2, 3])
+
+
 
 
 
